@@ -20,8 +20,11 @@ a {
 p,
 h1,
 h2,
-h3 {
+h3,
+ul,
+li {
   margin: 0px;
+  margin-bottom: 0px;
 }
 
 p {
@@ -30,6 +33,9 @@ p {
 }
 
 .menu {
+  font-size: 1rem;
+  font-weight: 550;
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -41,6 +47,12 @@ p {
   padding: 15px 30px;
   border-radius: 5px;
   color: black;
+  border: 2px solid transparent;
+  transition: borde-color 0.3;
+}
+
+.menu a:hover {
+  border-color: rgb(212, 55, 2);
 }
 
 .conteudo {
@@ -60,13 +72,27 @@ p {
   justify-items: end;
 }
 
-.detalhe {
+.especificacao p {
+  font-size: 1.5rem;
+}
+
+.especificacao h1 {
+  font-size: 2rem;
+}
+
+.especificacao h1::after {
+  content: "";
+  display: block;
   width: 60px;
   height: 4px;
   background: #e21;
   position: absolute;
   top: 30px;
   right: -30px;
+}
+
+.especificacao a:hover {
+  background-color: rgb(115, 32, 4);
 }
 
 .botao {
@@ -77,29 +103,50 @@ p {
   text-transform: uppercase;
 }
 
-.vantagens {
-  font-size: 54px;
+.vantagem {
+  font-size: 3rem;
   text-transform: uppercase;
   color: #9f9f9f;
   text-align: right;
   padding: 40px;
   align-self: center;
+  background-image: url(/img/onda.svg);
 }
 
-.icon {
-  background: #ffffff;
-  padding: 40px;
+.vantagem-lista {
+  padding: 20px;
+  margin-bottom: 0px;
+  font-size: 1.25rem;
+  list-style: none;
+  background-color: #ffff;
 }
 
-.icon-item {
+.vantagens-listas {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 10px 20px;
+  gap: 5px 10px;
   padding: 20px;
+  border-left: 4px solid transparent;
 }
 
-.icon-item p {
+.vantagens-listas h3 {
+  font-weight: 600;
+}
+
+.vantagens-listas:hover {
+  border-left: 3px solid #e21;
+}
+
+.vantagens-listas:nth-child(odd) {
+  background: #f7f7f7;
+}
+
+.vantagens-listas p {
   grid-column: 2;
+}
+
+.vantagens-listas img {
+  margin: 20px;
 }
 
 .rodape {
